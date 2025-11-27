@@ -17,7 +17,6 @@ const account = projectConfig.accounts[stage];
 new ApplicationStage(app, stage, {
   env: {
     account: account.number,
-
     region: account.region,
   },
 });

@@ -1,6 +1,2457 @@
 {
   "version": "48.0.0",
   "artifacts": {
+    "devbackend98B69E3E.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "devbackend98B69E3E.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "devbackend98B69E3E": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://024230653186/us-east-1",
+      "properties": {
+        "templateFile": "devbackend98B69E3E.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::024230653186:role/cdk-hnb659fds-deploy-role-024230653186-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::024230653186:role/cdk-hnb659fds-cfn-exec-role-024230653186-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-024230653186-us-east-1/e74a02de53e11433330f189a8f0db0e3d66af3b313f5c567bb14c9a7a2ee893e.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "devbackend98B69E3E.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::024230653186:role/cdk-hnb659fds-lookup-role-024230653186-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "dev-backend"
+      },
+      "dependencies": [
+        "devbackend98B69E3E.assets"
+      ],
+      "metadata": {
+        "/dev/backend/auth/userPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authuserPoolE16D54A3"
+          }
+        ],
+        "/dev/backend/auth/userPool/userPoolDomain/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authuserPooluserPoolDomainB2175CD5"
+          }
+        ],
+        "/dev/backend/auth/adminUserPoolGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authadminUserPoolGroupE53872E8"
+          }
+        ],
+        "/dev/backend/auth/usersUserPoolGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authusersUserPoolGroup65F49C73"
+          }
+        ],
+        "/dev/backend/auth/userPoolClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authuserPoolClientC35B193B"
+          }
+        ],
+        "/dev/backend/auth/identityPool": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authidentityPoolDFB34BBD"
+          }
+        ],
+        "/dev/backend/auth/authenticatedRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authauthenticatedRole0C8BFD60"
+          }
+        ],
+        "/dev/backend/auth/authenticatedRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authauthenticatedRoleDefaultPolicy90BA556F"
+          }
+        ],
+        "/dev/backend/auth/unauthenticatedRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authunauthenticatedRoleB4352B95"
+          }
+        ],
+        "/dev/backend/auth/unauthenticatedRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authunauthenticatedRoleDefaultPolicyA8987359"
+          }
+        ],
+        "/dev/backend/auth/identityPoolRoleAttachment": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authidentityPoolRoleAttachmentDFE56C4C"
+          }
+        ],
+        "/dev/backend/auth/regionalWebAcl": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authregionalWebAcl26CB3F94"
+          }
+        ],
+        "/dev/backend/auth/userPoolWebAclAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "authuserPoolWebAclAssociation275CC860"
+          }
+        ],
+        "/dev/backend/storage/loggingBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storageloggingBucket197C4DEC"
+          }
+        ],
+        "/dev/backend/storage/loggingBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storageloggingBucketPolicy0BDFC329"
+          }
+        ],
+        "/dev/backend/storage/loggingBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storageloggingBucketAutoDeleteObjectsCustomResource7C1406BA"
+          }
+        ],
+        "/dev/backend/storage/structuredDataBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storagestructuredDataBucket4F778E05"
+          }
+        ],
+        "/dev/backend/storage/structuredDataBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storagestructuredDataBucketPolicy182175F2"
+          }
+        ],
+        "/dev/backend/storage/structuredDataBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storagestructuredDataBucketAutoDeleteObjectsCustomResourceBEE86888"
+          }
+        ],
+        "/dev/backend/storage/structuredDataBucket/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "storagestructuredDataBucketNotifications43C2C713"
+          }
+        ],
+        "/dev/backend/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
+            "data": true
+          }
+        ],
+        "/dev/backend/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
+          }
+        ],
+        "/dev/backend/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
+          }
+        ],
+        "/dev/backend/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+          }
+        ],
+        "/dev/backend/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36"
+          }
+        ],
+        "/dev/backend/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/loggingBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentloggingBucket1DE5092E"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/loggingBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentloggingBucketPolicy1FEF2F34"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/loggingBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentloggingBucketAutoDeleteObjectsCustomResource37423224"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/apiExecutorFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentapiExecutorFunctionServiceRole26048F26"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/apiExecutorFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentapiExecutorFunctionServiceRoleDefaultPolicy33450280"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/apiExecutorFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentapiExecutorFunction3B9341C6"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/apiExecutorFunction/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentapiExecutorFunctionLogRetentionB4B7EE67"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/apiExecutorFunction/LambdaInvocationPolicy-c8fe461b7449418e": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentapiExecutorFunctionLambdaInvocationPolicyc8fe461b7449418eB42A3CB4"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/apiExecutorFunction/LambdaInvocationPolicy-c802eadb3adea9fb": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentapiExecutorFunctionLambdaInvocationPolicyc802eadb3adea9fbBD65C5D4"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/apiExecutorFunction/LambdaInvocationPolicy-c80cc89a2788f972": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentapiExecutorFunctionLambdaInvocationPolicyc80cc89a2788f9722031B246"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseRole89641E53"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseRoleDefaultPolicyEBB2279E"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/KBVectors/EncryptionPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseKBVectorsEncryptionPolicyDB2A94CD"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/KBVectors/NetworkPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseKBVectorsNetworkPolicy4F44D7E0"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/KBVectors/VectorCollection": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseKBVectorsVectorCollectionC9C8EF90"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/KBVectors/AOSSApiAccessAll/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseKBVectorsAOSSApiAccessAllF04272E0"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/KBVectors/IsDataAccessPolicyNotEmpty": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseKBVectorsIsDataAccessPolicyNotEmpty5E3715B9"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/KBVectors/DataAccessPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseKBVectorsDataAccessPolicy948FEFC4"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/KBIndex/ManageIndexPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseKBIndexManageIndexPolicyB374D982"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/KBIndex/VectorIndex/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseKBIndexVectorIndex5C0C31EF"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/MyCfnKnowledgeBase": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseMyCfnKnowledgeBase80493969"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBase/KBCRPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBaseKBCRPolicyF9DEFDAA"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBucket1B5D9BDB"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBucketPolicyE901FC91"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeBucketAutoDeleteObjectsCustomResourceB38146EA"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeSource/DataSource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeSourceDataSourceAB6DAA89"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryIngestionRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryIngestionRule625EFA8B"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryIngestionRule/AllowEventRuledevbackendwakamateMultiAgentdeliveryRouteSubAgentdeliveryIngestionRuledeliveryIngestionRuleTarget0HandlerC92F9860": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryIngestionRuleAllowEventRuledevbackendwakamateMultiAgentdeliveryRouteSubAgentdeliveryIngestionRuledeliveryIngestionRuleTarget0HandlerC92F98608D55F89F"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeDeploymentAwsCliLayer0A36A820"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryKnowledgeDeployment/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryKnowledgeDeploymentCustomResourceED824A7C"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryInitialIngestion/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryInitialIngestion175F4E5A"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryInitialIngestion/AllowEventRuledevbackendwakamateMultiAgentdeliveryRouteSubAgentdeliveryInitialIngestiondeliveryInitialIngestionTarget0Handler6EBCDC81": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryInitialIngestionAllowEventRuledevbackendwakamateMultiAgentdeliveryRouteSubAgentdeliveryInitialIngestiondeliveryInitialIngestionTarget0Handler6EBCDC81387821B1"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliverySyncChecker/SyncCheckerFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliverySyncCheckerSyncCheckerFunctionServiceRole7E3CBE7B"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliverySyncChecker/SyncCheckerFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliverySyncCheckerSyncCheckerFunctionServiceRoleDefaultPolicy1989488A"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliverySyncChecker/SyncCheckerFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliverySyncCheckerSyncCheckerFunction57A2C202"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliverySyncChecker/SyncSchedule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliverySyncCheckerSyncSchedule2A31C231"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliverySyncChecker/SyncSchedule/AllowEventRuledevbackendwakamateMultiAgentdeliveryRouteSubAgentdeliverySyncCheckerSyncCheckerFunction7210C769": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliverySyncCheckerSyncScheduleAllowEventRuledevbackendwakamateMultiAgentdeliveryRouteSubAgentdeliverySyncCheckerSyncCheckerFunction7210C769F5EE9559"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryAgent/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryAgentRole147E072D"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryAgent/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryAgentRoleDefaultPolicy68D87987"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/deliveryAgent/AgentResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentdeliveryAgentAgentResourceDA565358"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/deliveryRouteSubAgent/alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentdeliveryRouteSubAgentaliasF1D865A8"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseRole25D66390"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseRoleDefaultPolicyED6E8BCF"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/KBVectors/EncryptionPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseKBVectorsEncryptionPolicyDE33EF1C"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/KBVectors/NetworkPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseKBVectorsNetworkPolicyF3DEB138"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/KBVectors/VectorCollection": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseKBVectorsVectorCollection5667C950"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/KBVectors/AOSSApiAccessAll/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseKBVectorsAOSSApiAccessAll16DBA1D0"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/KBVectors/IsDataAccessPolicyNotEmpty": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseKBVectorsIsDataAccessPolicyNotEmpty3A3B6FDD"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/KBVectors/DataAccessPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseKBVectorsDataAccessPolicyEE2944E6"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/KBIndex/ManageIndexPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseKBIndexManageIndexPolicy7FF087D2"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/KBIndex/VectorIndex/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseKBIndexVectorIndex37BB0A49"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/MyCfnKnowledgeBase": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseMyCfnKnowledgeBaseE027EEF5"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBase/KBCRPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBaseKBCRPolicyCC6DD68C"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBucketE1F09CD0"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBucketPolicy0DB9A76E"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeBucketAutoDeleteObjectsCustomResourceB5E03A81"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeSource/DataSource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeSourceDataSource37200B8B"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionIngestionRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionIngestionRule0384A4DE"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionIngestionRule/AllowEventRuledevbackendwakamateMultiAgentcaptionGeneratorSubAgentcaptionIngestionRulecaptionIngestionRuleTarget0Handler5BAC276E": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionIngestionRuleAllowEventRuledevbackendwakamateMultiAgentcaptionGeneratorSubAgentcaptionIngestionRulecaptionIngestionRuleTarget0Handler5BAC276ED64A1656"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeDeploymentAwsCliLayer5FA5D8D8"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionKnowledgeDeployment/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionKnowledgeDeploymentCustomResourceA44C220F"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionInitialIngestion/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionInitialIngestion97644868"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionInitialIngestion/AllowEventRuledevbackendwakamateMultiAgentcaptionGeneratorSubAgentcaptionInitialIngestioncaptionInitialIngestionTarget0Handler338AF3DF": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionInitialIngestionAllowEventRuledevbackendwakamateMultiAgentcaptionGeneratorSubAgentcaptionInitialIngestioncaptionInitialIngestionTarget0Handler338AF3DF2B0786DC"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionSyncChecker/SyncCheckerFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionSyncCheckerSyncCheckerFunctionServiceRole9EAB7E77"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionSyncChecker/SyncCheckerFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionSyncCheckerSyncCheckerFunctionServiceRoleDefaultPolicy5B20CC6B"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionSyncChecker/SyncCheckerFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionSyncCheckerSyncCheckerFunctionB3330D6A"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionSyncChecker/SyncSchedule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionSyncCheckerSyncSchedule36CB3492"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionSyncChecker/SyncSchedule/AllowEventRuledevbackendwakamateMultiAgentcaptionGeneratorSubAgentcaptionSyncCheckerSyncCheckerFunctionF8363924": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionSyncCheckerSyncScheduleAllowEventRuledevbackendwakamateMultiAgentcaptionGeneratorSubAgentcaptionSyncCheckerSyncCheckerFunctionF8363924625E5D0A"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionAgent/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionAgentRole504CEBC1"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionAgent/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionAgentRoleDefaultPolicy874FD22B"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/captionAgent/AgentResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentcaptionAgentAgentResourceB6B6701A"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/captionGeneratorSubAgent/alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentcaptionGeneratorSubAgentalias17A1367D"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseRoleEC2297B8"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseRoleDefaultPolicy3E3B72E6"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/KBVectors/EncryptionPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseKBVectorsEncryptionPolicyA1939470"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/KBVectors/NetworkPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseKBVectorsNetworkPolicy7CB5A9FA"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/KBVectors/VectorCollection": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseKBVectorsVectorCollection684149B2"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/KBVectors/AOSSApiAccessAll/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseKBVectorsAOSSApiAccessAll98BFEDCA"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/KBVectors/IsDataAccessPolicyNotEmpty": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseKBVectorsIsDataAccessPolicyNotEmptyF6D3C5A4"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/KBVectors/DataAccessPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseKBVectorsDataAccessPolicy2DFCD1F4"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/KBIndex/ManageIndexPolicy": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseKBIndexManageIndexPolicyAC25AE00"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/KBIndex/VectorIndex/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseKBIndexVectorIndexD449A4C0"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/MyCfnKnowledgeBase": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseMyCfnKnowledgeBaseA04C268F"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBase/KBCRPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBaseKBCRPolicyC2D54D73"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBucketC1AE0875"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBucketPolicyFB813681"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeBucketAutoDeleteObjectsCustomResource3C9CC9D3"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeSource/DataSource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeSourceDataSource8B866DF8"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryIngestionRule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryIngestionRule4C0707E3"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryIngestionRule/AllowEventRuledevbackendwakamateMultiAgentinventorySubAgentinventoryIngestionRuleinventoryIngestionRuleTarget0HandlerA24F335C": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryIngestionRuleAllowEventRuledevbackendwakamateMultiAgentinventorySubAgentinventoryIngestionRuleinventoryIngestionRuleTarget0HandlerA24F335C3C45B68E"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeDeploymentAwsCliLayer6C99CBFC"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryKnowledgeDeployment/CustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryKnowledgeDeploymentCustomResource99536255"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryInitialIngestion/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryInitialIngestionE426A430"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryInitialIngestion/AllowEventRuledevbackendwakamateMultiAgentinventorySubAgentinventoryInitialIngestioninventoryInitialIngestionTarget0Handler05BEBD2C": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryInitialIngestionAllowEventRuledevbackendwakamateMultiAgentinventorySubAgentinventoryInitialIngestioninventoryInitialIngestionTarget0Handler05BEBD2C5B2F25C5"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventorySyncChecker/SyncCheckerFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventorySyncCheckerSyncCheckerFunctionServiceRoleDF4CD04F"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventorySyncChecker/SyncCheckerFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventorySyncCheckerSyncCheckerFunctionServiceRoleDefaultPolicyDF9F234A"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventorySyncChecker/SyncCheckerFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventorySyncCheckerSyncCheckerFunction5C9CD1CB"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventorySyncChecker/SyncSchedule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventorySyncCheckerSyncSchedule122FEB52"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventorySyncChecker/SyncSchedule/AllowEventRuledevbackendwakamateMultiAgentinventorySubAgentinventorySyncCheckerSyncCheckerFunction8DBCD4FD": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventorySyncCheckerSyncScheduleAllowEventRuledevbackendwakamateMultiAgentinventorySubAgentinventorySyncCheckerSyncCheckerFunction8DBCD4FDCE6FB722"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryAgent/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryAgentRole0CE10E12"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryAgent/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryAgentRoleDefaultPolicyB825C884"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/inventoryAgent/AgentResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentinventoryAgentAgentResource4076C6CA"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/inventorySubAgent/alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentinventorySubAgentalias69483BF5"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/immediateKbSyncChecker/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentimmediateKbSyncCheckerServiceRoleC2070C68"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/immediateKbSyncChecker/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentimmediateKbSyncCheckerServiceRoleDefaultPolicy78250BE8"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/immediateKbSyncChecker/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentimmediateKbSyncChecker52497FD3"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/immediateKbSyncChecker/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentimmediateKbSyncCheckerLogRetention31927623"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/TriggerKnowledgeBaseSync/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentTriggerKnowledgeBaseSync5385E7EA"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/TriggerKnowledgeBaseSync/CustomResourcePolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentTriggerKnowledgeBaseSyncCustomResourcePolicy52D98749"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/supervisorAgent/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentsupervisorAgentRole0E35DF0C"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/supervisorAgent/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentsupervisorAgentRoleDefaultPolicy875878BD"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/supervisorAgent/AgentResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentsupervisorAgentAgentResource96FF0CF0"
+          }
+        ],
+        "/dev/backend/wakamateMultiAgent/alias/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "wakamateMultiAgentalias753F4400"
+          }
+        ],
+        "/dev/backend/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/dev/backend/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/dev/backend/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/dev/backend/OpenSearchIndexCRProvider/CRRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OpenSearchIndexCRProviderCRRole466FC04E"
+          }
+        ],
+        "/dev/backend/OpenSearchIndexCRProvider/CustomResourcesFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OpenSearchIndexCRProviderCustomResourcesFunction4F9ADEA2"
+          }
+        ],
+        "/dev/backend/OpenSearchIndexCRProvider/CustomResourcesFunction/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OpenSearchIndexCRProviderCustomResourcesFunctionLogRetentionC32546EF"
+          }
+        ],
+        "/dev/backend/OpenSearchIndexCRProvider/ProviderRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OpenSearchIndexCRProviderProviderRole87B4E831"
+          }
+        ],
+        "/dev/backend/OpenSearchIndexCRProvider/ProviderRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OpenSearchIndexCRProviderProviderRoleDefaultPolicy9810CB1F"
+          }
+        ],
+        "/dev/backend/OpenSearchIndexCRProvider/Provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OpenSearchIndexCRProviderframeworkonEvent6CAE4696"
+          }
+        ],
+        "/dev/backend/OpenSearchIndexCRProvider/Provider/framework-onEvent/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OpenSearchIndexCRProviderframeworkonEventLogRetention64E7FA2B"
+          }
+        ],
+        "/dev/backend/AWSb4cf1abd4e4f4bc699441af7ccd9ec37": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 0
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 0
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 0
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 0
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 0
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 0
+          }
+        ],
+        "/dev/backend/AWSb4cf1abd4e4f4bc699441af7ccd9ec37/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSb4cf1abd4e4f4bc699441af7ccd9ec37ServiceRole9FFE9C50"
+          }
+        ],
+        "/dev/backend/AWSb4cf1abd4e4f4bc699441af7ccd9ec37/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSb4cf1abd4e4f4bc699441af7ccd9ec37ServiceRoleDefaultPolicy4D43A7C1"
+          }
+        ],
+        "/dev/backend/AWSb4cf1abd4e4f4bc699441af7ccd9ec37/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSb4cf1abd4e4f4bc699441af7ccd9ec371511E620"
+          }
+        ],
+        "/dev/backend/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          }
+        ],
+        "/dev/backend/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRole89A01265"
+          }
+        ],
+        "/dev/backend/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756CServiceRoleDefaultPolicy88902FDF"
+          }
+        ],
+        "/dev/backend/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C81C01536"
+          }
+        ],
+        "/dev/backend/AWS679f53fac002430cb0da5b7982bd2287": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 0
+          }
+        ],
+        "/dev/backend/AWS679f53fac002430cb0da5b7982bd2287/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd2287ServiceRoleC1EA0FF2"
+          }
+        ],
+        "/dev/backend/AWS679f53fac002430cb0da5b7982bd2287/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWS679f53fac002430cb0da5b7982bd22872D164C4C"
+          }
+        ],
+        "/dev/backend/streamingApi": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "If you are relying on AWS SDK v2 to be present in the Lambda environment already, please explicitly configure a NodeJS runtime of Node 16 or lower. [ack: @aws-cdk/aws-lambda-nodejs:sdkV2NotInRuntime]",
+            "trace": [
+              "Annotations.addMessage (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/aws-cdk-lib/core/lib/annotations.js:1:2066)",
+              "Annotations.addWarningV2 (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/aws-cdk-lib/core/lib/annotations.js:1:984)",
+              "new Bundling (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/aws-cdk-lib/aws-lambda-nodejs/lib/bundling.js:1:4190)",
+              "Function.bundle (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/aws-cdk-lib/aws-lambda-nodejs/lib/bundling.js:1:1141)",
+              "new NodejsFunction (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/aws-cdk-lib/aws-lambda-nodejs/lib/function.js:1:2443)",
+              "new CommonNodejsFunction (/home/nagini/aws_wakamate_deploy/src/backend/lib/common/constructs/lambda.ts:30:5)",
+              "new StreamingApi (/home/nagini/aws_wakamate_deploy/src/backend/lib/stacks/backend/streaming-api/index.ts:100:30)",
+              "new BackendStack (/home/nagini/aws_wakamate_deploy/src/backend/lib/stacks/backend/index.ts:48:26)",
+              "new ApplicationStage (/home/nagini/aws_wakamate_deploy/src/backend/lib/stage.ts:14:21)",
+              "Object.<anonymous> (/home/nagini/aws_wakamate_deploy/src/backend/bin/demo.ts:17:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1554:14)",
+              "Module.m._compile (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/index.ts:1618:23)",
+              "node:internal/modules/cjs/loader:1706:10",
+              "Object.require.extensions.<computed> [as .ts] (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:1289:32)",
+              "Function._load (node:internal/modules/cjs/loader:1108:12)",
+              "TracingChannel.traceSync (node:diagnostics_channel:322:14)",
+              "wrapModuleLoad (node:internal/modules/cjs/loader:220:24)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)",
+              "phase4 (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1554:14)",
+              "Object.<anonymous> (node:internal/modules/cjs/loader:1706:10)",
+              "Module.load (node:internal/modules/cjs/loader:1289:32)",
+              "Function._load (node:internal/modules/cjs/loader:1108:12)",
+              "TracingChannel.traceSync (node:diagnostics_channel:322:14)",
+              "wrapModuleLoad (node:internal/modules/cjs/loader:220:24)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)",
+              "node:internal/main/run_main_module:36:49"
+            ]
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/GraphQLAPI": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "fields argument on @hasMany is deprecated. Modify Session.chats to use references instead. This functionality will be removed in the next major release.",
+            "trace": [
+              "Annotations.addMessage (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/aws-cdk-lib/core/lib/annotations.js:1:2066)",
+              "Annotations.addWarning (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1090)",
+              "HasManyTransformer.generateResolvers (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/@aws-amplify/graphql-api-construct/node_modules/@aws-amplify/graphql-relational-transformer/src/graphql-has-many-transformer.ts:165:35)",
+              "GraphQLTransform.transform (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/@aws-amplify/graphql-api-construct/node_modules/@aws-amplify/graphql-transformer-core/src/transformation/transform.ts:328:21)",
+              "executeTransform (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/@aws-amplify/graphql-api-construct/node_modules/@aws-amplify/graphql-transformer/src/graphql-transformer.ts:186:15)",
+              "new AmplifyGraphqlApi (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/@aws-amplify/graphql-api-construct/src/amplify-graphql-api.ts:248:21)",
+              "new StreamingApi (/home/nagini/aws_wakamate_deploy/src/backend/lib/stacks/backend/streaming-api/index.ts:43:31)",
+              "new BackendStack (/home/nagini/aws_wakamate_deploy/src/backend/lib/stacks/backend/index.ts:48:26)",
+              "new ApplicationStage (/home/nagini/aws_wakamate_deploy/src/backend/lib/stage.ts:14:21)",
+              "Object.<anonymous> (/home/nagini/aws_wakamate_deploy/src/backend/bin/demo.ts:17:1)",
+              "Module._compile (node:internal/modules/cjs/loader:1554:14)",
+              "Module.m._compile (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/index.ts:1618:23)",
+              "node:internal/modules/cjs/loader:1706:10",
+              "Object.require.extensions.<computed> [as .ts] (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/index.ts:1621:12)",
+              "Module.load (node:internal/modules/cjs/loader:1289:32)",
+              "Function._load (node:internal/modules/cjs/loader:1108:12)",
+              "TracingChannel.traceSync (node:diagnostics_channel:322:14)",
+              "wrapModuleLoad (node:internal/modules/cjs/loader:220:24)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)",
+              "phase4 (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/bin.ts:649:14)",
+              "bootstrap (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/bin.ts:95:10)",
+              "main (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/bin.ts:55:10)",
+              "Object.<anonymous> (/home/nagini/aws_wakamate_deploy/src/backend/node_modules/ts-node/src/bin.ts:800:3)",
+              "Module._compile (node:internal/modules/cjs/loader:1554:14)",
+              "Object.<anonymous> (node:internal/modules/cjs/loader:1706:10)",
+              "Module.load (node:internal/modules/cjs/loader:1289:32)",
+              "Function._load (node:internal/modules/cjs/loader:1108:12)",
+              "TracingChannel.traceSync (node:diagnostics_channel:322:14)",
+              "wrapModuleLoad (node:internal/modules/cjs/loader:220:24)",
+              "Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)",
+              "node:internal/main/run_main_module:36:49"
+            ]
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/GraphQLAPI/ApiLogsRole": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "ApiLogsRole"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/GraphQLAPI/ApiLogsRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiGraphQLAPIApiLogsRole72EC53C2"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "ApiLogsRole"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/GraphQLAPI/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiGraphQLAPI03514468"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/GraphQLAPI/TransformerSchema": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiGraphQLAPITransformerSchemaF80547A2"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/GraphQLAPI/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiGraphQLAPILogRetentionA04E04DA"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/GraphQLAPI/NONE_DS": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "NONE_DS"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/GraphQLAPI/NONE_DS/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiGraphQLAPINONEDS2632E257"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "NONE_DS"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/HasEnvironmentParameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HasEnvironmentParameter"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/ShouldUseServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUseServerSideEncryption"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/ShouldUsePayPerRequestBilling": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePayPerRequestBilling"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/ShouldUsePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePointInTimeRecovery"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/ChatTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "ChatTable7A2D1C24"
+            }
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Chat"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/ChatTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ChatTable7A2D1C24"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Chat"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/ChatIAMRole": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "ChatIAMRole"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/ChatIAMRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ChatIAMRoleE701828D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "ChatIAMRole"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/ChatDataSource": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "ChatTable"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/ChatDataSource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ChatDataSource"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "ChatTable"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/QuerygetChatauth0Function/QuerygetChatauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetChatauth0FunctionQuerygetChatauth0FunctionAppSyncFunctionB782D042"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetChatauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/QuerygetChatpostAuth0Function/QuerygetChatpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetChatpostAuth0FunctionQuerygetChatpostAuth0FunctionAppSyncFunctionE92C34A9"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetChatpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/QueryGetChatDataResolverFn/QueryGetChatDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryGetChatDataResolverFnQueryGetChatDataResolverFnAppSyncFunction42984EC5"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryGetChatDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/queryGetChatResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetChatResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.getChat"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/QuerylistChatsauth0Function/QuerylistChatsauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistChatsauth0FunctionQuerylistChatsauth0FunctionAppSyncFunction10F1FFC0"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistChatsauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/QuerylistChatspostAuth0Function/QuerylistChatspostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistChatspostAuth0FunctionQuerylistChatspostAuth0FunctionAppSyncFunction8DFEBFA8"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistChatspostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/QueryListChatsDataResolverFn/QueryListChatsDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryListChatsDataResolverFnQueryListChatsDataResolverFnAppSyncFunctionDD1A72E1"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryListChatsDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/queryListChatsResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ListChatResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.listChats"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationcreateChatinit0Function/MutationcreateChatinit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateChatinit0FunctionMutationcreateChatinit0FunctionAppSyncFunction44DA10CB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateChatinit0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationcreateChatauth0Function/MutationcreateChatauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateChatauth0FunctionMutationcreateChatauth0FunctionAppSyncFunction30336172"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateChatauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationcreateChatpostAuth0Function/MutationcreateChatpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateChatpostAuth0FunctionMutationcreateChatpostAuth0FunctionAppSyncFunction8E50ECC5"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateChatpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationCreateChatDataResolverFn/MutationCreateChatDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationCreateChatDataResolverFnMutationCreateChatDataResolverFnAppSyncFunctionE604F9B6"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationCreateChatDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/mutationCreateChatResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateChatResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.createChat"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationupdateChatinit0Function/MutationupdateChatinit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateChatinit0FunctionMutationupdateChatinit0FunctionAppSyncFunctionA09641F2"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateChatinit0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationupdateChatauth0Function/MutationupdateChatauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateChatauth0FunctionMutationupdateChatauth0FunctionAppSyncFunction6FC0534A"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateChatauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationupdateChatpostAuth0Function/MutationupdateChatpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateChatpostAuth0FunctionMutationupdateChatpostAuth0FunctionAppSyncFunctionE11A4A99"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateChatpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationUpdateChatDataResolverFn/MutationUpdateChatDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationUpdateChatDataResolverFnMutationUpdateChatDataResolverFnAppSyncFunctionF99795A7"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationUpdateChatDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/mutationUpdateChatResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UpdateChatResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.updateChat"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationdeleteChatauth0Function/MutationdeleteChatauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteChatauth0FunctionMutationdeleteChatauth0FunctionAppSyncFunction2943A3BD"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteChatauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationdeleteChatpostAuth0Function/MutationdeleteChatpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteChatpostAuth0FunctionMutationdeleteChatpostAuth0FunctionAppSyncFunctionEDDD4B94"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteChatpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/MutationDeleteChatDataResolverFn/MutationDeleteChatDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationDeleteChatDataResolverFnMutationDeleteChatDataResolverFnAppSyncFunction39FB8383"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationDeleteChatDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/mutationDeleteChatResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteChatResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.deleteChat"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/SubscriptiononCreateChatauth0Function/SubscriptiononCreateChatauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateChatauth0FunctionSubscriptiononCreateChatauth0FunctionAppSyncFunction89EAF3DA"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateChatauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/SubscriptiononCreateChatpostAuth0Function/SubscriptiononCreateChatpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateChatpostAuth0FunctionSubscriptiononCreateChatpostAuth0FunctionAppSyncFunction9AB0E1A9"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateChatpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/SubscriptionOnCreateChatDataResolverFn/SubscriptionOnCreateChatDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnCreateChatDataResolverFnSubscriptionOnCreateChatDataResolverFnAppSyncFunction069FDD8E"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnCreateChatDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/subscriptionOnCreateChatResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateChatResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onCreateChat"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/SubscriptiononUpdateChatauth0Function/SubscriptiononUpdateChatauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateChatauth0FunctionSubscriptiononUpdateChatauth0FunctionAppSyncFunction2762B1F4"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateChatauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/SubscriptiononUpdateChatpostAuth0Function/SubscriptiononUpdateChatpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateChatpostAuth0FunctionSubscriptiononUpdateChatpostAuth0FunctionAppSyncFunction02C6698F"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateChatpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/SubscriptionOnUpdateChatDataResolverFn/SubscriptionOnUpdateChatDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnUpdateChatDataResolverFnSubscriptionOnUpdateChatDataResolverFnAppSyncFunction0E35E4D4"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnUpdateChatDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/subscriptionOnUpdateChatResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateChatResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onUpdateChat"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/SubscriptiononDeleteChatauth0Function/SubscriptiononDeleteChatauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteChatauth0FunctionSubscriptiononDeleteChatauth0FunctionAppSyncFunction084A5BDA"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteChatauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/SubscriptiononDeleteChatpostAuth0Function/SubscriptiononDeleteChatpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteChatpostAuth0FunctionSubscriptiononDeleteChatpostAuth0FunctionAppSyncFunction8CD308FB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteChatpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/SubscriptionOnDeleteChatDataResolverFn/SubscriptionOnDeleteChatDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnDeleteChatDataResolverFnSubscriptionOnDeleteChatDataResolverFnAppSyncFunction738E614D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnDeleteChatDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/subscriptionOnDeleteChatResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteChatResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onDeleteChat"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/QuerychatsBySessionIdauth0Function/QuerychatsBySessionIdauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerychatsBySessionIdauth0FunctionQuerychatsBySessionIdauth0FunctionAppSyncFunction511608CF"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerychatsBySessionIdauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/QuerychatsBySessionIdpostAuth0Function/QuerychatsBySessionIdpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerychatsBySessionIdpostAuth0FunctionQuerychatsBySessionIdpostAuth0FunctionAppSyncFunction7844C377"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerychatsBySessionIdpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/QueryChatsBySessionIdDataResolverFn/QueryChatsBySessionIdDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryChatsBySessionIdDataResolverFnQueryChatsBySessionIdDataResolverFnAppSyncFunction8B261FBE"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryChatsBySessionIdDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/queryChatsBySessionIdResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerychatsBySessionIdResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.chatsBySessionId"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/reference-to-devbackendstreamingApiamplifiedGraphApiGraphQLAPIAAF1A898ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetodevbackendstreamingApiamplifiedGraphApiGraphQLAPIAAF1A898ApiId"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/reference-to-devbackendstreamingApiamplifiedGraphApiGraphQLAPINONEDS6ECB38D4Name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetodevbackendstreamingApiamplifiedGraphApiGraphQLAPINONEDS6ECB38D4Name"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/devbackendstreamingApiamplifiedGraphApiChatChatDataSource1B749518Name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devbackendstreamingApiamplifiedGraphApiChatChatDataSource1B749518Name"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat/devbackendstreamingApiamplifiedGraphApiChatChatTableB99F1016Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "devbackendstreamingApiamplifiedGraphApiChatChatTableB99F1016Ref"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Chat.NestedStack/Chat.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiChatNestedStackChatNestedStackResourceC2572B4A"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/HasEnvironmentParameter": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HasEnvironmentParameter"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/ShouldUseServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUseServerSideEncryption"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/ShouldUsePayPerRequestBilling": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePayPerRequestBilling"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/ShouldUsePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ShouldUsePointInTimeRecovery"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SessionTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "SessionTableA016F679"
+            }
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Session"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SessionTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SessionTableA016F679"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Session"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SessionIAMRole": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SessionIAMRole"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SessionIAMRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SessionIAMRole4B1C588A"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SessionIAMRole"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SessionDataSource": [
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SessionTable"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SessionDataSource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SessionDataSource"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SessionTable"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/QuerygetSessionauth0Function/QuerygetSessionauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetSessionauth0FunctionQuerygetSessionauth0FunctionAppSyncFunction95057053"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetSessionauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/QuerygetSessionpostAuth0Function/QuerygetSessionpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerygetSessionpostAuth0FunctionQuerygetSessionpostAuth0FunctionAppSyncFunctionC4CB045A"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerygetSessionpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/QueryGetSessionDataResolverFn/QueryGetSessionDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryGetSessionDataResolverFnQueryGetSessionDataResolverFnAppSyncFunction5F527AA6"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryGetSessionDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/queryGetSessionResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "GetSessionResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.getSession"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/QuerylistSessionsauth0Function/QuerylistSessionsauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistSessionsauth0FunctionQuerylistSessionsauth0FunctionAppSyncFunction1D65ACC5"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistSessionsauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/QuerylistSessionspostAuth0Function/QuerylistSessionspostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QuerylistSessionspostAuth0FunctionQuerylistSessionspostAuth0FunctionAppSyncFunctionEDC6716D"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QuerylistSessionspostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/QueryListSessionsDataResolverFn/QueryListSessionsDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "QueryListSessionsDataResolverFnQueryListSessionsDataResolverFnAppSyncFunction815E9187"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "QueryListSessionsDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/queryListSessionsResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ListSessionResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Query.listSessions"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationcreateSessioninit0Function/MutationcreateSessioninit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateSessioninit0FunctionMutationcreateSessioninit0FunctionAppSyncFunction946C18E3"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateSessioninit0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationcreateSessionauth0Function/MutationcreateSessionauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateSessionauth0FunctionMutationcreateSessionauth0FunctionAppSyncFunction7CBFBA2E"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateSessionauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationcreateSessionpostAuth0Function/MutationcreateSessionpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationcreateSessionpostAuth0FunctionMutationcreateSessionpostAuth0FunctionAppSyncFunction11CC3396"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationcreateSessionpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationCreateSessionDataResolverFn/MutationCreateSessionDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationCreateSessionDataResolverFnMutationCreateSessionDataResolverFnAppSyncFunction31280A78"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationCreateSessionDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/mutationCreateSessionResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateSessionResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.createSession"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationupdateSessioninit0Function/MutationupdateSessioninit0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateSessioninit0FunctionMutationupdateSessioninit0FunctionAppSyncFunctionBD59246C"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateSessioninit0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationupdateSessionauth0Function/MutationupdateSessionauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateSessionauth0FunctionMutationupdateSessionauth0FunctionAppSyncFunction11D32875"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateSessionauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationupdateSessionpostAuth0Function/MutationupdateSessionpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationupdateSessionpostAuth0FunctionMutationupdateSessionpostAuth0FunctionAppSyncFunctionA77B449C"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationupdateSessionpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationUpdateSessionDataResolverFn/MutationUpdateSessionDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationUpdateSessionDataResolverFnMutationUpdateSessionDataResolverFnAppSyncFunctionAFE5A94C"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationUpdateSessionDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/mutationUpdateSessionResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "UpdateSessionResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.updateSession"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationdeleteSessionauth0Function/MutationdeleteSessionauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteSessionauth0FunctionMutationdeleteSessionauth0FunctionAppSyncFunctionB1B47628"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteSessionauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationdeleteSessionpostAuth0Function/MutationdeleteSessionpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationdeleteSessionpostAuth0FunctionMutationdeleteSessionpostAuth0FunctionAppSyncFunction3DE3F417"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationdeleteSessionpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/MutationDeleteSessionDataResolverFn/MutationDeleteSessionDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MutationDeleteSessionDataResolverFnMutationDeleteSessionDataResolverFnAppSyncFunctionE6DDD972"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "MutationDeleteSessionDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/mutationDeleteSessionResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeleteSessionResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Mutation.deleteSession"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SubscriptiononCreateSessionauth0Function/SubscriptiononCreateSessionauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateSessionauth0FunctionSubscriptiononCreateSessionauth0FunctionAppSyncFunction94AED2B8"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateSessionauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SubscriptiononCreateSessionpostAuth0Function/SubscriptiononCreateSessionpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateSessionpostAuth0FunctionSubscriptiononCreateSessionpostAuth0FunctionAppSyncFunctionFEC43344"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononCreateSessionpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SubscriptionOnCreateSessionDataResolverFn/SubscriptionOnCreateSessionDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnCreateSessionDataResolverFnSubscriptionOnCreateSessionDataResolverFnAppSyncFunction0D5DA3DF"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnCreateSessionDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/subscriptionOnCreateSessionResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononCreateSessionResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onCreateSession"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SubscriptiononUpdateSessionauth0Function/SubscriptiononUpdateSessionauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateSessionauth0FunctionSubscriptiononUpdateSessionauth0FunctionAppSyncFunction9F389E34"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateSessionauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SubscriptiononUpdateSessionpostAuth0Function/SubscriptiononUpdateSessionpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateSessionpostAuth0FunctionSubscriptiononUpdateSessionpostAuth0FunctionAppSyncFunctionA9AE4CCC"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononUpdateSessionpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SubscriptionOnUpdateSessionDataResolverFn/SubscriptionOnUpdateSessionDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnUpdateSessionDataResolverFnSubscriptionOnUpdateSessionDataResolverFnAppSyncFunction0EEAB453"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnUpdateSessionDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/subscriptionOnUpdateSessionResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononUpdateSessionResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onUpdateSession"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SubscriptiononDeleteSessionauth0Function/SubscriptiononDeleteSessionauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteSessionauth0FunctionSubscriptiononDeleteSessionauth0FunctionAppSyncFunction1F2F60AB"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteSessionauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SubscriptiononDeleteSessionpostAuth0Function/SubscriptiononDeleteSessionpostAuth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteSessionpostAuth0FunctionSubscriptiononDeleteSessionpostAuth0FunctionAppSyncFunction283CDC82"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptiononDeleteSessionpostAuth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/SubscriptionOnDeleteSessionDataResolverFn/SubscriptionOnDeleteSessionDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptionOnDeleteSessionDataResolverFnSubscriptionOnDeleteSessionDataResolverFnAppSyncFunction95502D3A"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SubscriptionOnDeleteSessionDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/subscriptionOnDeleteSessionResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SubscriptiononDeleteSessionResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Subscription.onDeleteSession"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/reference-to-devbackendstreamingApiamplifiedGraphApiGraphQLAPIAAF1A898ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetodevbackendstreamingApiamplifiedGraphApiGraphQLAPIAAF1A898ApiId"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session/reference-to-devbackendstreamingApiamplifiedGraphApiGraphQLAPINONEDS6ECB38D4Name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetodevbackendstreamingApiamplifiedGraphApiGraphQLAPINONEDS6ECB38D4Name"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/Session.NestedStack/Session.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiSessionNestedStackSessionNestedStackResource2F123B04"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/ConnectionStack/Sessionchatsauth0Function/Sessionchatsauth0Function.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Sessionchatsauth0FunctionSessionchatsauth0FunctionAppSyncFunctionEF9E8200"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Sessionchatsauth0Function"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/ConnectionStack/SessionChatsDataResolverFn/SessionChatsDataResolverFn.AppSyncFunction": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SessionChatsDataResolverFnSessionChatsDataResolverFnAppSyncFunction792EC670"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "SessionChatsDataResolverFn"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/ConnectionStack/sessionChatsResolver": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SessionchatsResolver"
+          },
+          {
+            "type": "graphqltransformer:resourceName",
+            "data": "Session.chats"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/ConnectionStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/ConnectionStack/reference-to-devbackendstreamingApiamplifiedGraphApiGraphQLAPIAAF1A898ApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetodevbackendstreamingApiamplifiedGraphApiGraphQLAPIAAF1A898ApiId"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/ConnectionStack/reference-to-devbackendstreamingApiamplifiedGraphApiGraphQLAPINONEDS6ECB38D4Name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetodevbackendstreamingApiamplifiedGraphApiGraphQLAPINONEDS6ECB38D4Name"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/ConnectionStack/reference-to-devbackendstreamingApiamplifiedGraphApiChatNestedStackChatNestedStackResourceBC8726E5Outputs.devbackendstreamingApiamplifiedGraphApiChatChatDataSource1B749518Name": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetodevbackendstreamingApiamplifiedGraphApiChatNestedStackChatNestedStackResourceBC8726E5OutputsdevbackendstreamingApiamplifiedGraphApiChatChatDataSource1B749518Name"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/ConnectionStack/reference-to-devbackendstreamingApiamplifiedGraphApiChatNestedStackChatNestedStackResourceBC8726E5Outputs.devbackendstreamingApiamplifiedGraphApiChatChatTableB99F1016Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetodevbackendstreamingApiamplifiedGraphApiChatNestedStackChatNestedStackResourceBC8726E5OutputsdevbackendstreamingApiamplifiedGraphApiChatChatTableB99F1016Ref"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/ConnectionStack.NestedStack/ConnectionStack.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiConnectionStackNestedStackConnectionStackNestedStackResource5F290900"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiAmplifyCodegenAssetsAmplifyCodegenAssetsBucket37B762E4"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiAmplifyCodegenAssetsAmplifyCodegenAssetsBucketPolicy265137E0"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiAmplifyCodegenAssetsAmplifyCodegenAssetsBucketAutoDeleteObjectsCustomResourceC333E1C8"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerB00BC037"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB61EA9DAB"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/L2GraphqlApi/lambdaDataSource/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiL2GraphqlApilambdaDataSourceServiceRoleEC41D915"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/L2GraphqlApi/lambdaDataSource/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiL2GraphqlApilambdaDataSourceServiceRoleDefaultPolicy8CA834DF"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/L2GraphqlApi/lambdaDataSource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiL2GraphqlApilambdaDataSourceF3651D79"
+          }
+        ],
+        "/dev/backend/streamingApi/amplifiedGraphApi/L2GraphqlApi/resolver/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiamplifiedGraphApiL2GraphqlApiresolver7EF2AFB7"
+          }
+        ],
+        "/dev/backend/streamingApi/resolverFunction/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiresolverFunctionServiceRole48F28470"
+          }
+        ],
+        "/dev/backend/streamingApi/resolverFunction/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiresolverFunctionServiceRoleDefaultPolicy8CCB5087"
+          }
+        ],
+        "/dev/backend/streamingApi/resolverFunction/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiresolverFunction4F5304E6"
+          }
+        ],
+        "/dev/backend/streamingApi/resolverFunction/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApiresolverFunctionLogRetention18861801"
+          }
+        ],
+        "/dev/backend/streamingApi/graphApiWebAclAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "streamingApigraphApiWebAclAssociation5C65D67E"
+          }
+        ],
+        "/dev/backend/DynamoDBModelTableReadIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableReadIOPS"
+          }
+        ],
+        "/dev/backend/DynamoDBModelTableWriteIOPS": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBModelTableWriteIOPS"
+          }
+        ],
+        "/dev/backend/DynamoDBBillingMode": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBBillingMode"
+          }
+        ],
+        "/dev/backend/DynamoDBEnablePointInTimeRecovery": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnablePointInTimeRecovery"
+          }
+        ],
+        "/dev/backend/DynamoDBEnableServerSideEncryption": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DynamoDBEnableServerSideEncryption"
+          }
+        ],
+        "/dev/backend/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
+          {
+            "type": "aws:cdk:is-custom-resource-handler-singleton",
+            "data": true
+          },
+          {
+            "type": "aws:cdk:is-custom-resource-handler-runtime-family",
+            "data": 2
+          }
+        ],
+        "/dev/backend/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleA41FC8C2"
+          }
+        ],
+        "/dev/backend/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleDefaultPolicyFF1C635B"
+          }
+        ],
+        "/dev/backend/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBC5D8AB21"
+          }
+        ],
+        "/dev/backend/awsAppsyncApiId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiId"
+          }
+        ],
+        "/dev/backend/awsAppsyncApiEndpoint": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncApiEndpoint"
+          }
+        ],
+        "/dev/backend/awsAppsyncAuthenticationType": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncAuthenticationType"
+          }
+        ],
+        "/dev/backend/awsAppsyncRegion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncRegion"
+          }
+        ],
+        "/dev/backend/amplifyApiModelSchemaS3Uri": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "amplifyApiModelSchemaS3Uri"
+          }
+        ],
+        "/dev/backend/awsAppsyncAdditionalAuthenticationTypes": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awsAppsyncAdditionalAuthenticationTypes"
+          }
+        ],
+        "/dev/backend/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/dev/backend/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/dev/backend/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "dev/backend"
+    },
     "aws-cdk-lib/feature-flag-report": {
       "type": "cdk:feature-flag-report",
       "properties": {
