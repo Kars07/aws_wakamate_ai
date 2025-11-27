@@ -1,0 +1,22 @@
+Inventory Management Best Practices
+
+Stock Level Optimization:
+- Maintain 21-30 days of inventory for fast-moving items
+- Keep 60-90 days for slower items
+- Reorder when stock hits 2x lead time demand
+
+Profitability Analysis:
+- Target minimum 25% gross margin
+- Calculate: (Selling Price - Cost) / Selling Price × 100
+- Focus restocking on high-margin, fast-moving products
+
+Restocking Priorities:
+1. Critical: Out of stock items with high demand
+2. High: Low stock with <14 days until stockout
+3. Medium: Items approaching minimum stock levels
+4. Low: Slow-moving items with adequate stock
+
+Velocity Calculations:
+- Daily Velocity = Units Sold / Days
+- Days Until Stockout = Current Stock / Daily Velocity
+- Recommended Order = (Daily Velocity × Lead Days) + Safety Stock

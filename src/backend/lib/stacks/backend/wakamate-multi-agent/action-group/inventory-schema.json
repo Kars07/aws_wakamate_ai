@@ -1,0 +1,165 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Inventory Management API",
+    "description": "API for inventory analysis, profitability tracking, and restocking recommendations",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/getInventorySummary": {
+      "post": {
+        "description": "Get comprehensive inventory summary including stock levels, values, and alerts",
+        "operationId": "getInventorySummary",
+        "requestBody": {
+          "description": "No parameters required",
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Inventory summary response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "total_products": { "type": "integer" },
+                    "total_inventory_value": { "type": "number" },
+                    "total_potential_revenue": { "type": "number" },
+                    "total_potential_profit": { "type": "number" },
+                    "out_of_stock_items": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    },
+                    "low_stock_items": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    },
+                    "timestamp": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getProfitabilityAnalysis": {
+      "post": {
+        "description": "Analyze product profitability including margins and profit potential",
+        "operationId": "getProfitabilityAnalysis",
+        "requestBody": {
+          "description": "No parameters required",
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Profitability analysis response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "top_profit_opportunities": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": { "type": "string" },
+                          "margin": { "type": "number" },
+                          "potential_profit": { "type": "number" },
+                          "realized_profit": { "type": "number" },
+                          "stock": { "type": "integer" },
+                          "units_sold": { "type": "integer" }
+                        }
+                      }
+                    },
+                    "low_margin_products": {
+                      "type": "array",
+                      "items": { "type": "object" }
+                    },
+                    "timestamp": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getRestockRecommendations": {
+      "post": {
+        "description": "Generate intelligent restocking recommendations based on stock levels and velocity",
+        "operationId": "getRestockRecommendations",
+        "requestBody": {
+          "description": "No parameters required",
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Restock recommendations response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "critical_restocks": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": { "type": "string" },
+                          "current_stock": { "type": "integer" },
+                          "recommended_quantity": { "type": "integer" },
+                          "investment_needed": { "type": "number" },
+                          "reason": { "type": "string" }
+                        }
+                      }
+                    },
+                    "high_priority_restocks": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": { "type": "string" },
+                          "current_stock": { "type": "integer" },
+                          "recommended_quantity": { "type": "integer" },
+                          "investment_needed": { "type": "number" },
+                          "days_until_stockout": { "type": "number" }
+                        }
+                      }
+                    },
+                    "timestamp": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

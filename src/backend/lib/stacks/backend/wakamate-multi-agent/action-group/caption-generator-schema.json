@@ -1,0 +1,107 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Caption Generator API",
+    "description": "API for generating social media captions using product inventory data",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/getProductsForCaption": {
+      "post": {
+        "description": "Get all products from inventory for caption generation",
+        "operationId": "getProductsForCaption",
+        "requestBody": {
+          "description": "Optional product filter",
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "product_filter": {
+                    "type": "string",
+                    "description": "Optional filter to search for specific products by name or category",
+                    "nullable": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "List of products for caption generation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "products": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": { "type": "string" },
+                          "category": { "type": "string" },
+                          "price": { "type": "number" },
+                          "description": { "type": "string" },
+                          "stock": { "type": "integer" }
+                        }
+                      }
+                    },
+                    "total_count": { "type": "integer" },
+                    "timestamp": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/findProductByName": {
+      "post": {
+        "description": "Find a specific product by name from inventory",
+        "operationId": "findProductByName",
+        "requestBody": {
+          "description": "Product name to search for",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "product_name": {
+                    "type": "string",
+                    "description": "Name of the product to find"
+                  }
+                },
+                "required": ["product_name"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Product details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" },
+                    "category": { "type": "string" },
+                    "price": { "type": "number" },
+                    "description": { "type": "string" },
+                    "stock": { "type": "integer" },
+                    "cost_price": { "type": "number" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

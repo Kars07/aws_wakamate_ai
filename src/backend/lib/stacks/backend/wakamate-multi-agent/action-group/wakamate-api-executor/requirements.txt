@@ -1,0 +1,6 @@
+# AWS Lambda Powertools is provided by the managed layer
+# Only include additional dependencies
+
+requests>=2.31.0
+geopy>=2.4.0
+pydantic>=2.0.0

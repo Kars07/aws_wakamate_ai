@@ -1,0 +1,136 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Delivery Route Optimization API",
+    "description": "API for optimizing delivery routes in Lagos, Nigeria with traffic intelligence",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/geocodeAddress": {
+      "post": {
+        "description": "Geocode a Lagos address to get latitude and longitude coordinates",
+        "operationId": "geocodeAddress",
+        "requestBody": {
+          "description": "Address to geocode",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "address": {
+                    "type": "string",
+                    "description": "The address in Lagos to geocode"
+                  }
+                },
+                "required": ["address"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful geocoding response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "address": { "type": "string" },
+                    "latitude": { "type": "number" },
+                    "longitude": { "type": "number" },
+                    "full_address": { "type": "string" },
+                    "success": { "type": "boolean" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/optimizeRoute": {
+      "post": {
+        "description": "Optimize delivery route for multiple addresses using TSP algorithm",
+        "operationId": "optimizeDeliveryRoute",
+        "requestBody": {
+          "description": "List of addresses to optimize",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "addresses": {
+                    "type": "string",
+                    "description": "Comma-separated list or JSON array of addresses in Lagos"
+                  }
+                },
+                "required": ["addresses"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Optimized route response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "optimized_route": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    },
+                    "total_distance_km": { "type": "number" },
+                    "estimated_time_hours": { "type": "number" },
+                    "num_stops": { "type": "integer" },
+                    "success": { "type": "boolean" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getTrafficInfo": {
+      "post": {
+        "description": "Get current traffic information and recommendations for Lagos",
+        "operationId": "getTrafficInformation",
+        "requestBody": {
+          "description": "Traffic info request (no parameters needed)",
+          "required": false,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Traffic information response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "traffic_level": { "type": "string" },
+                    "time_multiplier": { "type": "number" },
+                    "advice": { "type": "string" },
+                    "current_time": { "type": "string" },
+                    "timestamp": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
